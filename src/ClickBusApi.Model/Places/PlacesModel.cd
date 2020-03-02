@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ClickBusApi.Model.Places.Place">
+    <Position X="3.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAEAACAAIECAIAAAAAAJAAAAAAAAABAAABAA=</HashCode>
+      <FileName>Places\Place.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="State" />
+      <Property Name="Station" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ClickBusApi.Model.Places.State">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAgAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Places\State.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClickBusApi.Model.Places.Station">
+    <Position X="5.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAACAIAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Places\Station.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Current" />
+      <Property Name="Default" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ClickBusApi.Model.Places.StationValue">
+    <Position X="8.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAQAAABAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Places\Station.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClickBusApi.Model.Places.PlaceItem">
+    <Position X="0.5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AQACgAAAAAAACAAAACAAAAQAAABAAAAAAEAAAAQAAAA=</HashCode>
+      <FileName>Places\PlaceItem.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Place" />
+    </ShowAsAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

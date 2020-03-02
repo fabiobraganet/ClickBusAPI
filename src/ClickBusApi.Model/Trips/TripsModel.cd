@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ClickBusApi.Model.Trips.Schedule">
+    <Position X="8.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAIAAAAAAAAAAAAAAAAAAAABAAAAAAAAAQA=</HashCode>
+      <FileName>Trips\Schedule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClickBusApi.Model.Trips.Price">
+    <Position X="8.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAABAAAAIAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Trips\Price.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClickBusApi.Model.Trips.Trip">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAAAAABAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Trips\Trip.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Parts" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="ClickBusApi.Model.Trips.Waypoint">
+    <Position X="8.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAwAQAAAgAAAAAAAAAEAAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>Trips\Waypoint.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Place" />
+      <Property Name="Schedule" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Prices" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="ClickBusApi.Model.Trips.Part">
+    <Position X="3" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIABAAAACAAAAAAAgoAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Trips\Part.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Bus" />
+      <Property Name="Arrival" />
+      <Property Name="Departure" />
+      <Property Name="BusCompany" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ClickBusApi.Model.Trips.Point">
+    <Position X="5.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Trips\Point.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Waypoint" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ClickBusApi.Model.Trips.TripBusCompany">
+    <Position X="5.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Trips\BusCompany.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClickBusApi.Model.Trips.Bus">
+    <Position X="5.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>Trips\Bus.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClickBusApi.Model.Trips.Place">
+    <Position X="11" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAEAACAAIECAIAAAAAAJAAAAAAAAABAAABAA=</HashCode>
+      <FileName>Trips\Place.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Station" />
+      <Property Name="State" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ClickBusApi.Model.Trips.State">
+    <Position X="13.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAgAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Trips\State.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClickBusApi.Model.Trips.Station">
+    <Position X="11" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAACAIAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Trips\Station.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Current" />
+      <Property Name="Default" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ClickBusApi.Model.Trips.StationValue">
+    <Position X="13.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAQAAABAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Trips\Station.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
