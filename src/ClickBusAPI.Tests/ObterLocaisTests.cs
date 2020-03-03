@@ -3,12 +3,13 @@ namespace ClickBusAPI.Tests
 {
     using ClickBusAPI.Tests.Interfaces;
     using Refit;
+    using System.Threading.Tasks;
     using Xunit;
 
     public class ObterLocaisTests
     {
         [Fact]
-        public void ObterTodosOsLocais()
+        public async Task ObterTodosOsLocais()
         {
             var api = RestService.For<IPlacesApiService>("https://api-evaluation.clickbus.com.br");
 

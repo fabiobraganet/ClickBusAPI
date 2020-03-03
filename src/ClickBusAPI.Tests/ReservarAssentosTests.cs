@@ -15,21 +15,19 @@ namespace ClickBusAPI.Tests
         public ReservarAssentosTests()
         {
             if (string.IsNullOrWhiteSpace(ReservarAssentosTests.SessionId))
-                GetSession();
+                GetSession().ConfigureAwait(false).GetAwaiter();
         }
 
         public static string SessionId { get; set; }
 
-        private void GetSession()
+        private async Task GetSession()
         {
             var host = "https://api-evaluation.clickbus.com.br";
             var apiSession = RestService.For<ISessionsApiService>(host);
 
-            var resultSession = apiSession
+            var resultSession = await apiSession
                 .GetSessionAsync()
-                .ConfigureAwait(false)
-                .GetAwaiter()
-                .GetResult();
+                .ConfigureAwait(false);
 
             ReservarAssentosTests.SessionId = resultSession.Content;
         }

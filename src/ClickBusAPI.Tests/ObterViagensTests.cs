@@ -3,12 +3,13 @@ namespace ClickBusAPI.Tests
 {
     using ClickBusAPI.Tests.Interfaces;
     using Refit;
+    using System.Threading.Tasks;
     using Xunit;
 
     public class ObterViagensTests
     {
         [Fact]
-        public void ObterViagens()
+        public async Task ObterViagens()
         {
             var api = RestService.For<ITripsApiService>("https://api-evaluation.clickbus.com.br");
 
@@ -19,11 +20,9 @@ namespace ClickBusAPI.Tests
                 departure = "2020-03-11"
             };
 
-            var result = api
+            var result = await api
                 .GetAllTripsAsync(parameters)
-                .ConfigureAwait(false)
-                .GetAwaiter()
-                .GetResult();
+                .ConfigureAwait(false);
 
             Assert.True(result != null && result.Items.Count > 0, "É preciso haver o objeto e a lista de objetos de viagem");
 
