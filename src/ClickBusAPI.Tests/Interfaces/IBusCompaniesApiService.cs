@@ -9,5 +9,8 @@ namespace ClickBusAPI.Tests.Interfaces
     {
         [Get("/api/v1/buscompanies")]
         Task<BusCompaniesContent<BusCompany>> GetAllBusCompaniesAsync();
+
+        [Get("/api/v1/buscompanies/{id}")]
+        Task<BusCompaniesContent<BusCompany>> GetBusCompanyAsync(string id);
     }
 }
