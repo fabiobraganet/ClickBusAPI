@@ -34,7 +34,9 @@ namespace ClickBusAPI.Tests
 
                 if (result.Items[0].Parts != null
                     && result.Items[0].Parts.Count > 0)
+                {
                     Assert.True(!string.IsNullOrWhiteSpace(result.Items[0].Parts[0].TripId.ToString()), "É preciso haver o id no objeto interno de part");
+                }
             }
         }
     }

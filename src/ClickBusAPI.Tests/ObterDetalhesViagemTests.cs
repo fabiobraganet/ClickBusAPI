@@ -10,10 +10,12 @@ namespace ClickBusAPI.Tests
         [Fact]
         public void ObterDetalhesViagem()
         {
+            var scheduleid = "72aefe98-fe60-328f-8c25-542f7e931bf1";
+
             var api = RestService.For<ITripDetailsApiService>("https://api-evaluation.clickbus.com.br");
 
             var result = api
-                .GetTripDetailsAsync("72aefe98-fe60-328f-8c25-542f7e931bf1")
+                .GetTripDetailsAsync(scheduleid)
                 .ConfigureAwait(false)
                 .GetAwaiter()
                 .GetResult();
