@@ -43,7 +43,7 @@ namespace ClickBusAPI.Tests
 
             var parameters = new SeatBlockPutFormParameters()
             {
-                Meta = null,
+                Meta = new SeatBlockMeta(),
                 Request = new RequestContent<SeatBlockPutValues>()
                 {
                     Request = new SeatBlockPutValues()

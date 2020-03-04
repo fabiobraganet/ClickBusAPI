@@ -13,7 +13,7 @@ namespace ClickBusAPI.Tests
         {
             var api = RestService.For<IPlacesApiService>("https://api-evaluation.clickbus.com.br");
 
-            var result = api.GetAllPlacesAsync().ConfigureAwait(false).GetAwaiter().GetResult();
+            var result = await api.GetAllPlacesAsync().ConfigureAwait(false);
 
             Assert.True(result != null && result.Items.Count > 0, "É preciso haver o objeto e a lista de objetos de locais");
 

@@ -1,7 +1,6 @@
 ﻿
 namespace ClickBusAPI.Tests.Parameters
 {
-    using ClickBusApi.Model.Base;
     using Refit;
 
     public class RequestContent<T>
@@ -10,10 +9,26 @@ namespace ClickBusAPI.Tests.Parameters
 
     }
 
+    //"meta": { "model": "Retail", "store": "Aarim", "platform": "API", "api_key": "$2y$05$32207918184a424e2c8ccuyhYj9hvtm.6saALefnJynTnJsyEYSRy" }
+    public class SeatBlockMeta
+    {
+        [AliasAs("model")]
+        public string Model { get; set; } = "Retail";
+
+        [AliasAs("store")]
+        public string Store { get; set; } = "Aarim";
+
+        [AliasAs("platform")]
+        public string Platform { get; set; } = "API";
+
+        [AliasAs("api_key")]
+        public string ApiKey { get; set; } = "$2y$05$32207918184a424e2c8ccuyhYj9hvtm.6saALefnJynTnJsyEYSRy";
+    }
+
     public class SeatBlockPutFormParameters
     {
         [AliasAs("meta")]
-        public Meta Meta { get; set; }
+        public SeatBlockMeta Meta { get; set; }
 
         [AliasAs("request")]
         public RequestContent<SeatBlockPutValues> Request { get; set; }
