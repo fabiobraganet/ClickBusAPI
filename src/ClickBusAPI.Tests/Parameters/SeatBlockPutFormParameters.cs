@@ -22,7 +22,7 @@ namespace ClickBusAPI.Tests.Parameters
 
     public class SeatBlockPutValues
     {
-        [AliasAs("form")]
+        [AliasAs("from")]
         public string From { get; set; }
 
         [AliasAs("to")]
