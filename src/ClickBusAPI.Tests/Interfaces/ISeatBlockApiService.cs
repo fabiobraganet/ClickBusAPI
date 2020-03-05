@@ -10,9 +10,11 @@ namespace ClickBusAPI.Tests.Interfaces
     public interface ISeatBlockApiService
     {
         [Put("/api/v1/seat-block")]
-        Task<ResponseContent<SeatBlock>> PutSeatBlockAsync([Header("PHPSESSID")] string cookie, SeatBlockPutFormParameters parameters);
+        [Headers("Content-Type: application/json; charset=UTF-8")]
+        Task<ResponseContent<SeatBlock>> PutSeatBlockAsync([Header("cookie")] string cookie, [Body(BodySerializationMethod.Serialized)] SeatBlockPutFormParameters parameters);
 
         [Delete("/api/v1/seat-block")]
-        Task<ResponseDeletedContent<SeatBlock>> DeleteSeatBlockAsync([Header("PHPSESSID")] string cookie, SeatBlockPutFormParameters parameters);
+        [Headers("Content-Type: application/json; charset=UTF-8")]
+        Task<ResponseDeletedContent<SeatBlock>> DeleteSeatBlockAsync([Header("PHPSESSID")] string cookie, [Body(BodySerializationMethod.Serialized)] SeatBlockPutFormParameters parameters);
     }
 }

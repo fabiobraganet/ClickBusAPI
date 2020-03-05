@@ -1,6 +1,7 @@
 ﻿
 namespace ClickBusAPI.Tests.Parameters
 {
+    using Newtonsoft.Json;
     using Refit;
 
     public class RequestContent<T>
@@ -9,80 +10,79 @@ namespace ClickBusAPI.Tests.Parameters
 
     }
 
-    //"meta": { "model": "Retail", "store": "Aarim", "platform": "API", "api_key": "$2y$05$32207918184a424e2c8ccuyhYj9hvtm.6saALefnJynTnJsyEYSRy" }
     public class SeatBlockMeta
     {
-        [AliasAs("model")]
+        [JsonProperty(PropertyName = "model")]
         public string Model { get; set; } = "Retail";
 
-        [AliasAs("store")]
+        [JsonProperty(PropertyName = "store")]
         public string Store { get; set; } = "Aarim";
 
-        [AliasAs("platform")]
+        [JsonProperty(PropertyName = "platform")]
         public string Platform { get; set; } = "API";
 
-        [AliasAs("api_key")]
+        [JsonProperty(PropertyName = "api_key")]
         public string ApiKey { get; set; } = "$2y$05$32207918184a424e2c8ccuyhYj9hvtm.6saALefnJynTnJsyEYSRy";
     }
 
     public class SeatBlockPutFormParameters
     {
-        [AliasAs("meta")]
+        [JsonProperty(PropertyName = "meta")]
         public SeatBlockMeta Meta { get; set; }
 
-        [AliasAs("request")]
-        public RequestContent<SeatBlockPutValues> Request { get; set; }
+        [JsonProperty(PropertyName = "request")]
+        public SeatBlockPutValues Request { get; set; }
 
     }
 
     public class SeatBlockPutValues
     {
-        [AliasAs("from")]
+        [JsonProperty(PropertyName = "from")]
         public string From { get; set; }
 
-        [AliasAs("to")]
+        [JsonProperty(PropertyName = "to")]
         public string To { get; set; }
 
-        [AliasAs("seat")]
+        [JsonProperty(PropertyName = "seat")]
         public string Seat { get; set; }
 
-        [AliasAs("passenger")]
+        [JsonProperty(PropertyName = "passenger")]
         public SeatBlockPutPassenger Passenger { get; set; }
 
-        [AliasAs("schedule")]
+        [JsonProperty(PropertyName = "schedule")]
         public SeatBlockPutSchedule Schedule { get; set; }
 
-        [AliasAs("sessionId")]
+        [JsonProperty(PropertyName = "sessionId")]
         public string SessionId { get; set; }
     }
 
     public class SeatBlockPutPassenger
     {
-        [AliasAs("name")]
+        [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
 
-        [AliasAs("document")]
+        [JsonProperty(PropertyName = "document")]
         public string Document { get; set; }
 
-        [AliasAs("documentType")]
+        [JsonProperty(PropertyName = "documentType")]
         public string DocumentType { get; set; }
 
-        [AliasAs("gender")]
+        [JsonProperty(PropertyName = "gender")]
         public string Gender { get; set; }
     }
 
     public class SeatBlockPutSchedule
     {
-        [AliasAs("id")]
+        [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
 
-        [AliasAs("date")]
+        [JsonProperty(PropertyName = "date")]
         public string Date { get; set; }
 
-        [AliasAs("time")]
+        [JsonProperty(PropertyName = "time")]
         public string Time { get; set; }
-        
-        [AliasAs("timezone")]
+
+        [JsonProperty(PropertyName = "timezone")]
         public string TimeZone { get; set; }
     }
 }
