@@ -4,12 +4,6 @@ namespace ClickBusAPI.Tests.Parameters
     using Newtonsoft.Json;
     using Refit;
 
-    public class RequestContent<T>
-    {
-        public T Request { get; set; }
-
-    }
-
     public class SeatBlockMeta
     {
         [JsonProperty(PropertyName = "model")]
@@ -25,7 +19,7 @@ namespace ClickBusAPI.Tests.Parameters
         public string ApiKey { get; set; } = "$2y$05$32207918184a424e2c8ccuyhYj9hvtm.6saALefnJynTnJsyEYSRy";
     }
 
-    public class SeatBlockPutFormParameters
+    public class SeatBlockInputParameters
     {
         [JsonProperty(PropertyName = "meta")]
         public SeatBlockMeta Meta { get; set; }
